@@ -1,22 +1,12 @@
+const multiply = require('./multiply.js')
 var chai = require('chai');
-chai.assert.equal(multiply(3, 3), 9);  
-chai.assert.equal(multiply(4, 4), 16);  
 
-function multiply(a,b){
+describe('Testing multiplication', function(){
+    it('First test', function() {
+        chai.assert.equal(multiply(3, 3), 9);  
+      });
+      it('Second test', function() {
+        chai.assert.equal(multiply(4, 5), 20);  
+      });
+})
 
-    var val = Math.abs(a)
-
-    if(a == 0 || b == 0){
-    return 0
-    }else{
-
-    for(var i = 1; i < Math.abs(b); i++){
-    val += Math.abs(a); 
-    }
-    if(a < 0 || b < 0){
-    return -val
-    }else{
-    return val;
-    }
-}
-}
